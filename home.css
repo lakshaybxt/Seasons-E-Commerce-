@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.main {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 10px;
+    row-gap: 10px;
+}
+.product-container {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding-bottom: 10px;
+}
+.product-image-container {
+    position: relative;
+    display: inline-block; 
+    width: 100%;
+}
+.product-rating-container {
+    position: absolute;
+    bottom: 12px;
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.product-rating-stars {
+    margin-top: 0;
+    width: 60px;
+    vertical-align: middle;
+}
+.product-rating-count {
+    font-size: 12px;
+    font-weight: 600;
+    color: #333;
+    font-family: "Montserrat", sans-serif;
+}
+/* text */
+.lower-container {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.name-qty {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.name-tag {
+    font-weight: 600;
+    font-size: 12px;
+    color: #2D2D2D;
+    font-family: "Montserrat", sans-serif;
+}
+.product-name {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    color: #363537;
+    margin-top: 4px;
+}
+/* Important */
+.limit-text-to-1-lines {
+    /* white-space: nowrap; */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+.price-qty-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.product-price {
+    color: #000000;
+    font-family: "Montserrat", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+}
+.select-qty {
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+}
+.add-to-cart-button {
+    background-color: #ff6f00; /* Orange color for a shopping feel */
+    color: white; /* White text for contrast */
+    border: none; /* Remove default border */
+    padding: 7px 10px; /* Comfortable padding */
+    font-size: 13px; /* Readable font size */
+    font-weight: bold; /* Make text stand out */
+    border-radius: 5px; /* Slightly rounded edges */
+    cursor: pointer; /* Show hand cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.add-to-cart-button:hover {
+    background-color: #e65100; /* Darker orange on hover */
+    transform: scale(1.05); /* Slight pop effect */
+}
+
+.add-to-cart-button:active {
+    background-color: #bf360c; 
+    transform: scale(0.98); 
+} 
