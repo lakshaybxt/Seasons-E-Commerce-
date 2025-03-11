@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+.footer-end {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+    right: 0;
+    margin-right: 0;
+    /* for overflow */
+    box-sizing: border-box;
+    overflow-x: hidden;
+    margin-top: 100px;
+}
+.footer-seasons-logo {
+    filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(700%) hue-rotate(-15deg);
+    margin-left: -10px;
+    width: 100px;
+}
+.footer-main {
+    margin-top: 50px;
+}
+.season-support {
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    column-gap: 180px;
+    margin-left: -22px;
+}
+.customer-service {
+    display: flex;
+    flex-direction: column;
+}
+.customer-service span {
+    color: #ff6f00;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom:14px;
+}
+.customer-service-details {
+    display: flex;
+    flex-direction: column;
+}
+.customer-service-details a {
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+.customer-service input {
+    background-color: #000000;
+    border: none;
+    border-bottom: 2px solid #ff6f00;
+    padding: 0 0 0 10px;
+    height: 34px;
+    width: 57%;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+.customer-service input:focus {
+    outline: none;
+    border-bottom: 2px solid #ffa000; 
+}
+.customer-service button {
+    border: none;
+    background-color: #ff6f00;
+    padding: 9px 25px;
+}
+.input-email {
+    display: flex;
+}
+.lower-content {
+    display: block;
+}
