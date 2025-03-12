@@ -1,0 +1,236 @@
+.content {
+    margin-top: 64px;
+    display: flex;
+}
+.items-quantity {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.one {
+    font-weight: 500;
+}
+.two {
+    font-weight: 600;
+}
+.section-one {
+    display: grid;
+}
+.delivery-section {
+    display: flex;
+    /* justify-content: center; */
+    border: 2px solid black;
+    padding: 14px;
+    /* justify-content: space-between; */
+}
+.product-image img {
+    height: 140px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+.details {
+    border: 2px solid;
+}
+.upper-details {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+.close-container {
+    /* margin-left: 100px; */
+}
+.product-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.lower-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.main {
+    margin-top: 90px;
+    margin-bottom: 100px;
+    max-width: 1100px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    column-gap: 12px;
+    align-items: start;
+}
+
+@media(max-width: 1000px) {
+    .main {
+        max-width: 500px;
+    }
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.cart-item-details-grid {
+    display: grid;
+    grid-template-columns: 120px 1fr 1fr;
+    column-gap: 25px;
+}
+@media (max-width: 1000px) {
+    .cart-item-details-grid {
+      grid-template-columns: 100px 1fr;
+      row-gap: 30px;
+    }
+}
+.product-image {
+    width: 100%;
+    max-height: 140px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px;
+    /* object-fit:contain; */
+}
+.product-name {
+    font-weight: 500;
+    color: #676767;
+    font-size: 12px;
+    margin-bottom: 5px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.delivery-date {
+    color: rgb(2, 148, 201);
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.seasons {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+.product-price {
+    color: rgb(0, 118, 0);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+.product-quantity .link-primary {
+    margin-left: 3px;
+}
+@media (max-width: 1000px) {
+    .delivery-options {
+        grid-column: 1/ span 2;
+    }
+}
+.delivery-options-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.delivery-option {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+.delivery-option-input {
+    margin-left: 0;
+    cursor: pointer;
+}
+.delivery-option-date {
+    color: rgb(0, 118, 0);
+    font-weight: 500;
+    margin-bottom: 3px;
+    font-size: 14px;
+}
+.delivery-option-price {
+    font-size: 13px;
+    font-weight: 400;
+    color: #676767;
+}
+.select-qty {
+    border: none;
+    outline: none;
+}
+.select-qty:active {
+    outline: none;
+}
+.cart-item-container,
+.payment-summary {
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 5px;
+    padding: 18px;
+}
+.cart-item-container {
+    margin-bottom: 10px;
+}
+.payment-summary {
+    padding-bottom: 5px;
+}
+
+@media (max-width: 1000px) {
+    .payment-summary {
+        grid-row: 1;
+        margin-bottom: 12px;
+    }
+}
+.payment-summary-title {
+    font-weight: 600;
+    font-size: 17px;
+    margin-bottom: 16px;
+}
+.payment-summary-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    font-size: 15px;
+    color: #676767;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+.payment-summary-money {
+    text-align: right;
+}
+.subtotal-row .payment-summary-money {
+    border-top: 1px dotted #676767;
+}
+.subtotal-row div {
+    padding-top: 9px;
+}
+.total-row {
+    font-weight: 600;
+    font-size: 19px;
+    color: #000000;
+    border-top: 1px dotted #676767;
+    padding-top: 18px;
+}
+.place-order-button {
+    width: 100%;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 11px;
+    margin-bottom: 15px;
+}
+.button-primary {
+    border: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 550;
+    border-radius: 8px;
+    background-color: #ffd033;
+    cursor: pointer;
+}
+.button-primary:hover {
+    background-color: rgb(255, 221, 0); 
+    transform: scale(1.05); 
+}
+
+.button-primary:active {
+    background-color: #ffd033; 
+    transform: scale(0.98); 
+} 

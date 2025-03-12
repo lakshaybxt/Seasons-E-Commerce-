@@ -143,18 +143,20 @@
 }
 .add-to-cart-button {
     background-color: #ffd033; 
-    color: white; 
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    color: black; 
     border: none; 
     padding: 7px 10px; 
-    font-size: 13px; 
-    font-weight: bold; 
+    font-size: 11px; 
+    font-weight: 600; 
     border-radius: 5px; 
     cursor: pointer; 
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .add-to-cart-button:hover {
-    background-color: #e65100; /* Darker yellow on hover */
+    background-color: rgb(255, 221, 0); /* Darker yellow on hover */
     transform: scale(1.05); /* Slight pop effect */
 }
 

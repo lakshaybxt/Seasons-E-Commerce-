@@ -42,7 +42,7 @@ products.forEach((product) => {
                         ₹${product.price}
                     </div>
                     <button class="add-to-cart-button js-add-to-cart">
-                        Add to cart
+                        ADD TO BAG
                     </button>
                 </div>
             </div>			
