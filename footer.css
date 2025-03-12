@@ -17,7 +17,7 @@
     margin-top: 100px;
 }
 .footer-seasons-logo {
-    filter: brightness(0) saturate(100%) invert(40%) sepia(100%) saturate(700%) hue-rotate(-15deg);
+    filter: brightness(0) saturate(100%) invert(70%) sepia(100%) saturate(500%) hue-rotate(-10deg);
     margin-left: -10px;
     width: 100px;
 }
@@ -29,14 +29,14 @@
     /* align-items: center; */
     justify-content: space-around;
     column-gap: 180px;
-    margin-left: -22px;
+    margin-left: 0px;
 }
 .customer-service {
     display: flex;
     flex-direction: column;
 }
 .customer-service span {
-    color: #ff6f00;
+    color: #ffd033; 
     font-weight: 600;
     font-size: 16px;
     margin-bottom:14px;
@@ -70,7 +70,7 @@
 }
 .customer-service button {
     border: none;
-    background-color: #ff6f00;
+    background-color: #ffd033; 
     padding: 9px 25px;
 }
 .customer-service button:active {
@@ -83,3 +83,9 @@
 .lower-content {
     display: block;
 }
+/* @media( max-width: 880px ) {
+    .footer-main {
+        display: flex;
+        flex-direction: column;
+    }
+} */

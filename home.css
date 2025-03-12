@@ -3,11 +3,51 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+/* 1fr means a column will take up the
+       remaining space in the grid */
 .products-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(7, 1fr);
     column-gap: 10px;
     row-gap: 10px;
+}
+/* @media is used to create responsive design (making the
+   website look good on any screen size). This @media
+   means when the screen width is 2000px or less, we
+   will divide the grid into 6 columns instead of 7. */
+@media (max-width: 2000px) {
+    .products-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+}
+/* This @media means when the screen width is 1600px or
+   less, we will divide the grid into 5 columns. */
+@media (max-width: 1600px) {
+    .products-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 900px) {
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+  
+@media (max-width: 680px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 450px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
 }
 .product-container {
     display: flex;
@@ -20,6 +60,10 @@
     position: relative;
     display: inline-block; 
     width: 100%;
+}
+.product-image {
+    max-width: 100%;
+    max-height: 100%;
 }
 .product-rating-container {
     position: absolute;
@@ -98,23 +142,23 @@
     border: 1px solid #e0e0e0;
 }
 .add-to-cart-button {
-    background-color: #ff6f00; /* Orange color for a shopping feel */
-    color: white; /* White text for contrast */
-    border: none; /* Remove default border */
-    padding: 7px 10px; /* Comfortable padding */
-    font-size: 13px; /* Readable font size */
-    font-weight: bold; /* Make text stand out */
-    border-radius: 5px; /* Slightly rounded edges */
-    cursor: pointer; /* Show hand cursor on hover */
+    background-color: #ffd033; 
+    color: white; 
+    border: none; 
+    padding: 7px 10px; 
+    font-size: 13px; 
+    font-weight: bold; 
+    border-radius: 5px; 
+    cursor: pointer; 
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .add-to-cart-button:hover {
-    background-color: #e65100; /* Darker orange on hover */
+    background-color: #e65100; /* Darker yellow on hover */
     transform: scale(1.05); /* Slight pop effect */
 }
 
 .add-to-cart-button:active {
-    background-color: #bf360c; 
+    background-color: #ffd033; 
     transform: scale(0.98); 
 } 
