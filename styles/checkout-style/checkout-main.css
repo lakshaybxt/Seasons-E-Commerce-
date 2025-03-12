@@ -36,9 +36,9 @@
     width: 500px;
     justify-content: space-between;
 }
-.close-container {
-    /* margin-left: 100px; */
-}
+/* .close-container {
+    /* margin-left: 100px; 
+} */
 .product-details {
     display: flex;
     flex-direction: column;

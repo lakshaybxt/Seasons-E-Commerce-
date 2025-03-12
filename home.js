@@ -41,7 +41,9 @@ products.forEach((product) => {
                     <div class="product-price">
                         ₹${product.price}
                     </div>
-                    <button class="add-to-cart-button js-add-to-cart">
+                    <!-- added a data attribute -->
+                    <button class="add-to-cart-button js-add-to-cart"
+                    data-product-id="${product.id}">
                         ADD TO BAG
                     </button>
                 </div>
@@ -50,10 +52,36 @@ products.forEach((product) => {
     `;
 });
 
+//whiile generating the HTML above for home page in add to bag button we give a DATA ATTRIBUTE" to the button so we get every button uniquely
+
 document.querySelector('.products-grid').innerHTML = productsHTML;
 
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     button.addEventListener('click', () => {
-        console.log('clicked');
+        //Here we getting each button seperately by the data attribure
+        let productId = button.dataset.productId
+        let matchingItem;
+        cart.forEach((item) => {
+            if(productId === item.productId) {
+                matchingItem = item;
+            }
+        });
+
+        if(matchingItem) {
+            matchingItem.quantity++;
+        } else {
+            cart.push({
+                productId: productId,
+                quantity: 1
+            });
+        }
+
+        let cartQuantity = 0;
+        cart.forEach((item) => {
+            cartQuantity += item.quantity;
+        });
+        console.log(cart);
+
+        document.querySelector('.js-nav-right-quantity').innerHTML = cartQuantity;
     });
 });
