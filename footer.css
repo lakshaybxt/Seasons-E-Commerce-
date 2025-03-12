@@ -23,13 +23,16 @@
 }
 .footer-main {
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
 }
 .season-support {
     display: flex;
     /* align-items: center; */
-    justify-content: space-around;
+    justify-content: space-between;
     column-gap: 180px;
     margin-left: 0px;
+    margin-right: 100px;
 }
 .customer-service {
     display: flex;
@@ -83,9 +86,28 @@
 .lower-content {
     display: block;
 }
-/* @media( max-width: 880px ) {
+.lower-content h1 {
+    margin-top: 0;
+}
+hr {
+    border: none; 
+    height: 2px;   
+    background-color:white; 
+    margin: 20px 0; 
+}
+@media( max-width: 880px ) {
     .footer-main {
-        display: flex;
-        flex-direction: column;
+        margin-top: 10px;
     }
-} */
+    .season-support {
+        flex-direction: column;
+        gap: 15px;
+        margin-right: 0;
+    }
+    .customer-service-details {
+        flex-direction: row;
+    }
+    .input-email input {
+        width: 300px;
+    }
+}
