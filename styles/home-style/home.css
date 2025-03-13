@@ -160,7 +160,24 @@
     transform: scale(1.05); /* Slight pop effect */
 }
 
-.add-to-cart-button:active {
+/* .add-to-cart-button:active {
     background-color: #ffd033; 
     transform: scale(0.98); 
-} 
+}  */
+
+.added-to-cart-visible {
+    background-color: #2ECC71;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.added-to-cart-visible img {
+    height: 14px;
+    width: 14px;
+    object-fit: fill;
+    margin-left: 5px;
+}
+.added-to-cart-visible:hover {
+    background-color: #2ECC71;
+}

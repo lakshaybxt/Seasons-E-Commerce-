@@ -42,7 +42,7 @@ products.forEach((product) => {
                         ₹${product.price}
                     </div>
                     <!-- added a data attribute -->
-                    <button class="add-to-cart-button js-add-to-cart"
+                    <button class="add-to-cart-button js-add-to-cart js-add-to-cart-${product.id}"
                     data-product-id="${product.id}">
                         ADD TO BAG
                     </button>
@@ -57,6 +57,9 @@ products.forEach((product) => {
 document.querySelector('.products-grid').innerHTML = productsHTML;
 
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
+     //by using a closure we are giving each added button a unique id
+    let addedMessageTimeoutId;
+
     button.addEventListener('click', () => {
         //Here we getting each button seperately by the data attribure
         let productId = button.dataset.productId
@@ -83,10 +86,22 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         cart.forEach((item) => {
             cartQuantity += item.quantity;
         });
-        console.log(cart);
+        // console.log(cart);
 
         document.querySelector('.js-nav-right-quantity').innerHTML = cartQuantity;
         //after item add to the cart reset the quantity selector quantity
         quantitySelector.value = 1;
+
+        const addedMessage = document.querySelector(`.js-add-to-cart-${productId}`);
+        addedMessage.classList.add('added-to-cart-visible');
+        addedMessage.innerHTML = `ADDED <img src="images/shop.svg">`;
+        
+        if(addedMessageTimeoutId) clearTimeout(addedMessageTimeoutId); 
+
+        const timeoutId = setTimeout(() => {
+            addedMessage.classList.remove('added-to-cart-visible');
+            addedMessage.innerHTML = `ADD TO BAG`;
+        }, 2000);
+        addedMessageTimeoutId = timeoutId;
     });
 });
