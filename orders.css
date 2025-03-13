@@ -219,6 +219,12 @@ body {
         max-width: 170px;
         max-height: 170px;
     }
+    .login {
+        display: none;
+    }
+    .search-input {
+        width: 140px;
+    }
   }
   
   @media (max-width: 450px) {

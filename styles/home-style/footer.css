@@ -122,4 +122,8 @@ hr {
     .input-email input {
         width: 300px;
     }
+    .customer-service-details-social {
+        display: flex;
+        flex-direction: column;
+    }
 }

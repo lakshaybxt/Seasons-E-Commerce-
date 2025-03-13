@@ -223,3 +223,11 @@ body {
         color: white;
     }
 }
+@media(max-width: 800px) {
+    .search-input {
+        width: 140px;
+    }
+    .nav-right-sep {
+        display: none;
+    }
+}
