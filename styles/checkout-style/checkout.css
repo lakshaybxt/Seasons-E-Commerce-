@@ -34,6 +34,9 @@ body {
     align-items: baseline;
     justify-content: baseline;
 }
+.nav-left a {
+    display: flex;
+}
 .nav-right {
     display: flex;
     flex-direction: column;
