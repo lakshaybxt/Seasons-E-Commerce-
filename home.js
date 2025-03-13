@@ -1,3 +1,6 @@
+import { products, addToCart } from "./data/products.js";
+import { cart } from "./data/cart.js";
+
 let productsHTML = ``;
 products.forEach((product) => {
     productsHTML += `
@@ -56,41 +59,26 @@ products.forEach((product) => {
 
 document.querySelector('.products-grid').innerHTML = productsHTML;
 
+function updateCartQuantity() {
+    let cartQuantity = 0;
+    cart.forEach((item) => {
+        cartQuantity += item.quantity;
+    });
+    // console.log(cart);
+
+    document.querySelector('.js-nav-right-quantity').innerHTML = cartQuantity;
+}
+
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
      //by using a closure we are giving each added button a unique id
     let addedMessageTimeoutId;
 
     button.addEventListener('click', () => {
         //Here we getting each button seperately by the data attribure
-        let productId = button.dataset.productId
-        let matchingItem;
-        cart.forEach((item) => {
-            if(productId === item.productId) {
-                matchingItem = item;
-            }
-        });
+        let productId = button.dataset.productId;
 
-        const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
-        const quantity = Number(quantitySelector.value);
-
-        if(matchingItem) {
-            matchingItem.quantity += quantity;
-        } else {
-            cart.push({
-                productId: productId,
-                quantity: quantity
-            });
-        }
-
-        let cartQuantity = 0;
-        cart.forEach((item) => {
-            cartQuantity += item.quantity;
-        });
-        // console.log(cart);
-
-        document.querySelector('.js-nav-right-quantity').innerHTML = cartQuantity;
-        //after item add to the cart reset the quantity selector quantity
-        quantitySelector.value = 1;
+        addToCart(productId);
+        updateCartQuantity();
 
         const addedMessage = document.querySelector(`.js-add-to-cart-${productId}`);
         addedMessage.classList.add('added-to-cart-visible');
