@@ -19,7 +19,7 @@ products.forEach((product) => {
                     <!-- product name -->
                     <div class="name-tag">Seasons®</div>
                     <div class="product-quantity-container">
-                        <select class="select-qty">
+                        <select class="select-qty js-quantity-selector-${product.id}">
                             <option selected value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -67,12 +67,15 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
             }
         });
 
+        const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
+        const quantity = Number(quantitySelector.value);
+
         if(matchingItem) {
-            matchingItem.quantity++;
+            matchingItem.quantity += quantity;
         } else {
             cart.push({
                 productId: productId,
-                quantity: 1
+                quantity: quantity
             });
         }
 
@@ -83,5 +86,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         console.log(cart);
 
         document.querySelector('.js-nav-right-quantity').innerHTML = cartQuantity;
+        //after item add to the cart reset the quantity selector quantity
+        quantitySelector.value = 1;
     });
 });

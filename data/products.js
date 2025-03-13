@@ -139,6 +139,20 @@ const products = [{
         "Beige"
     ]
 }, {
+    id: "e4f64a65-1377-42bc-89a5-e572d19252e2",
+    image: "images/product-images/spiderman-baseball-cap-592448-1698922488-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 52
+    },
+    name: "Unisex Black Spiderman Printed Baseball Cap",
+    price: 699,
+    keywords: [
+        "Unisex",
+        "Spiderman",
+        "Cap"
+    ]
+}, {
     id: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
     image: "images/product-images/men-s-black-the-panda-way-graphic-printed-oversized-t-shirt-580633-1738673393-1.webp",
     rating: {
@@ -188,5 +202,110 @@ const products = [{
         "Graphic",
         "Oversized",
         "Hoodies"
+    ]
+}, {
+    id: "04701903-bc79-49c6-bc11-1af7e3651358",
+    image: "images/product-images/women-s-black-all-over-printed-oversized-dress-635470-1733295650-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 562
+    },
+    name: "Women's Black & White All Over Printed Dress",
+    price: 1299,
+    keywords: [
+        "Women",
+        "Dress",
+        "Black"
+    ]
+}, {
+    id: "82bb68d7-ebc9-476a-989c-c78a40ee5cd9",
+    image: "images/product-images/men-s-blue-moon-knight-typography-t-shirt-473052-1721984996-1.webp",
+    rating: {
+        stars: 4,
+        count: 160
+    },
+    name: "Men's Navy Blue Moon Knight Graphic Printed T-shirt",
+    price: 499,
+    keywords: [
+        "Men",
+        "Navy Blue",
+        "Moon",
+        "Knight",
+        "t-shirt"
+    ]
+}, {
+    id: "901eb2ca-386d-432e-82f0-6fb1ee7bf969",
+    image: "images/product-images/women-s-black-garfield-graphic-printed-oversized-t-shirt-dress-589796-1721651098-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 232
+    },
+    name: "Women's Black Garfield Graphic Printed Oversized T-shirt Dress",
+    price: 799,
+    keywords: [
+        "Women",
+        "Black",
+        "t-shirt",
+        "Dress"
+    ]
+}, {
+    id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
+    image: "images/product-images/men-s-gray-buff-inner-elastic-exposed-pyjama-581594-1689603678-1.webp",
+    rating: {
+        stars: 5,
+        count: 846
+    },
+    name: "Men's Grey Pyjamas",
+    price: 599,
+    keywords: [
+        "Men",
+        "Grey",
+        "Pyjamas"
+    ]
+}, {
+    id: "6b07d4e7-f540-454e-8a1e-363f25dbae7d",
+    image: "images/product-images/unpredictable-ninja-naruto-sling-bag-608183-1698922869-1.webp",
+    rating: {
+        stars: 4,
+        count: 99
+    },
+    name: "Unisex Black Unpredictable Ninja Naruto Printed Sling Bag",
+    price: 449,
+    keywords: [
+        "Unisex",
+        "Bag",
+        "Naruto"
+    ]
+}, {
+    id: "a82c6bac-3067-4e68-a5ba-d827ac0be010",
+    image: "images/product-images/wicked-bucket-hat-608211-1701942093-1.webp",
+    rating: {
+        stars: 4,
+        count: 215
+    },
+    name: "Unisex Black Wicked Printed Bucket Hat",
+    price: 349,
+    keywords: [
+        "Unisex",
+        "Hat",
+        "Cap",
+        "Black"
+    ]
+}, {
+    id: "b0f17cc5-8b40-4ca5-9142-b61fe3d98c85",
+    image: "images/product-images/men-s-black-squid-game-graphic-printed-oversized-hoodie-t-shirt-659558-1735650203-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 2465
+    },
+    name: "Men's Black Squid Game Graphic Printed Oversized Hoodie T-shirt",
+    price: 899,
+    keywords: [
+        "Men",
+        "Squid", 
+        "Game",
+        "Oversized",
+        "Hoodie",
+        "t-shirt"
     ]
 }];
