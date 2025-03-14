@@ -1,4 +1,4 @@
-import { cart, removeFromCart } from './data/cart.js';
+import { cart, removeFromCart, updateCartQuantity } from './data/cart.js';
 import { products } from './data/products.js';
 
 let catSummaryHTML = ``;
@@ -102,5 +102,13 @@ document.querySelectorAll('.js-delete-button')
             const container = document.querySelector(`.js-item-container-${productId}`);
             
             if(container) container.remove();
+            updatePageSummary();
         });
     });
+
+function updatePageSummary() {
+    const cartQuantity = updateCartQuantity();
+    document.querySelector('.two').innerHTML = `(${cartQuantity} Items)`;
+}
+
+updatePageSummary();
