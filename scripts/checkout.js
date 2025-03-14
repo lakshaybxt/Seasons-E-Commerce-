@@ -33,7 +33,7 @@ cart.forEach((cartItem) => {
                         Delivery by <span> Tuesday, June 21</span>
                     </div>
                     <div class="product-quantity">
-                        <span class="   ">
+                        <span class="quantity">
                             Quantity: <span class="quantity-label">${cartItem.quantity}</span>
                         </span>
                         <span class="update-quantity-link link-primary">
