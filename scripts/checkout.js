@@ -1,4 +1,4 @@
-import { cart } from './data/cart.js';
+import { cart, removeFromCart } from './data/cart.js';
 import { products } from './data/products.js';
 
 let catSummaryHTML = ``;
@@ -15,9 +15,9 @@ cart.forEach((cartItem) => {
     });
 
     catSummaryHTML += `
-        <div class="cart-item-container">
+        <div class="cart-item-container js-item-container-${matchingProduct.id}">
             <!-- delete button -->
-            <span class="delete-button"><img src="images/close.svg"></span>
+            <span class="delete-button js-delete-button" data-product-id="${matchingProduct.id}"><img src="images/close.svg"></span>
             <div class="cart-item-details-grid">
                 <img class="product-image" src="${matchingProduct.image}">
 
@@ -81,7 +81,7 @@ cart.forEach((cartItem) => {
                                 Monday, June 13
                             </div>
                             <div class="delivery-option-price">
-                                $70 - Shipping
+                                ₹70 - Shipping
                             </div>
                         </div>
                     </div>
@@ -92,3 +92,14 @@ cart.forEach((cartItem) => {
     `;
 });
 document.querySelector('.js-order-summary').innerHTML = catSummaryHTML;
+
+document.querySelector('.js-delete-button')
+    .forEach((link) => {
+        link.addEventListner('click', () => {
+            const productId = link.dataset.productId;
+            removeFromCart(productId);
+
+            const container = document.querySelector(`.js-item-container-${productId}`);
+            container.remove(container);
+        });
+    });

@@ -1,4 +1,4 @@
-export const cart = [{
+export const cart = JSON.stringify(localStorage.getItem('cart')) [{
     productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     quantity: 2
 }, {
@@ -11,6 +11,11 @@ export const cart = [{
     productId: "58b4fc92-e98c-42aa-8c55-b6b79996769a",
     quantity: 1
 }];
+
+function saveToStorage() {
+    localStorage.setItem('cart', JSON.stringify(cart));
+}
+
 export function addToCart(productId) {
     let matchingItem;
     cart.forEach((item) => {
@@ -32,4 +37,10 @@ export function addToCart(productId) {
     }
     //after item add to the cart reset the quantity selector quantity
     quantitySelector.value = 1;
+
+    saveToStorage();
+}
+
+export function removeFromCart(productId) {
+    
 }
