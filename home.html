@@ -26,7 +26,8 @@
 	<header class="nav-bar">
 		<!-- Logo & Category -->
 		<div class="nav-left">
-			<img class="seasons-logo" src="images/seasons-logo.svg">
+			<img class="seasons-logo seasons-logo-off" src="images/seasons-logo.svg">
+			<img class="season-mobile-logo" src="images/seasons-mobile-logo.svg">
 			<nav>
 				<a class="nav-left-content" href="#">CLOTHING</a>
 				<a class="nav-left-content" href="#">OTHERS</a>
@@ -40,7 +41,7 @@
 		<!-- Login & Bag -->
 		<div class="nav-right">
 			<span class="nav-right-sep">|</span>
-			<a href="#">LOGIN</a>
+			<a href="#"><img src="images/login.svg"></a>
 			<a href="checkout.html" class="cart-icon">
 				<img src="./images/shop.svg">
 				<span class="nav-right-quantity js-nav-right-quantity"></span>
@@ -139,6 +140,7 @@
       <p>All rights are reserved to Lakshay &copy; 2025</p>
 		</div>
 	</footer>
-	<script type="module" src="./scripts/home.js"></script>
+	<script type="module" src="./scripts/home.js" defer></script>
+	<script type="module" src="carousel.js" defer></script>
 </body>
 </html>

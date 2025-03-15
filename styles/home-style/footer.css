@@ -7,32 +7,38 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 32px;
+    padding-right: 32px;
     right: 0;
     margin-right: 0;
     /* for overflow */
     box-sizing: border-box;
     overflow-x: hidden;
-    margin-top: 100px;
+    /* margin-top: 100px; */
+    padding-top: 75px;
+
+    /* padding: 20px; */
 }
 .footer-seasons-logo {
     filter: brightness(0) saturate(100%) invert(70%) sepia(100%) saturate(500%) hue-rotate(-10deg);
-    width: 100px;
+    width: 120px;
+    height: 48px;
+    margin-bottom: 10px;
 }
 .footer-main {
-    margin-top: 50px;
+    /* margin-top: 50px; */
     display: flex;
     flex-direction: column;
 }
 .season-support {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
     /* align-items: center; */
-    justify-content: space-between;
-    column-gap: 180px;
-    margin-left: 0px;
-    margin-right: 100px;
-    vertical-align: middle;
+    /* justify-content: space-between; */
+    /* column-gap: 180px; */
+    /* margin-left: 0px; */
+    /* margin-right: 100px; */
+    /* vertical-align: middle; */
 }
 .customer-service {
     display: flex;
@@ -83,6 +89,9 @@
 .input-email {
     display: flex;
 }
+.input-email input {
+    width: 45%;
+}
 .input-email input::placeholder {
     color: rgb(230, 223, 223);
     font-family: "Montserrat", sans-serif;
@@ -110,23 +119,34 @@ hr {
     background-color:white; 
     margin: 20px 0; 
 }
+@media(max-width: 1200px) {
+    .season-support {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
 @media( max-width: 880px ) {
     .footer-main {
         margin-top: 10px;
     }
     .season-support {
-        flex-direction: column;
-        gap: 15px;
-        margin-right: 0;
+        grid-template-columns: repeat(1, 1fr);
+        /* gap: 15px;
+        margin-right: 0; */
     }
     .customer-service-details {
-        flex-direction: row;
-    }
-    .input-email input {
-        width: 300px;
+        flex-direction: column;
     }
     .customer-service-details-social {
         display: flex;
         flex-direction: column;
+    }
+}
+@media (max-width: 450px) {
+    .lower-content h1{
+        font-size: 24px
+    }
+    .lower-content p {
+        font-size: 14px;
     }
 }
