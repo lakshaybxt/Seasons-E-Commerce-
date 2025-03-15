@@ -162,10 +162,38 @@
 .select-qty:active {
     outline: none;
 }
-.update-quantity-link {
+.update-quantity-link,
+.link-primary {
     color: rgb(2, 148, 201);
     font-size: 14px;
     font-weight: 500;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none
+}
+.update-quantity-link:hover {
+    color: darkgoldenrod;
+}
+.quantity-input {
+    width: 30px;
+    display: none;
+}
+.save-quantty-link {
+    display: none;
+}
+.save-quantity-link:hover {
+    color: #007600;
+    font-weight: 600;
+}
+.is-editing-quantity .quantity-input,
+.is-editing-quantity .save-quantty-link {
+    display: initial;
+}
+.is-editing-quantity .quantity-label,
+.is-editing-quantity .update-quantity-link {
+    display: none;
 }
 .cart-item-container,
 .payment-summary {
@@ -177,18 +205,21 @@
     margin-bottom: 10px;
     position: relative;
     padding-bottom: 10px;
-    /* display: inline-block; */
 }
 .delete-button {
     position: absolute;
     right: 3px;
-    /* left: 3px; */
     top: 5px;
     cursor: pointer;
 }
 .delete-button img {
     height: 16px;
     width: 16px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.delete-button img:hover {
+    filter: brightness(0) saturate(100%) invert(38%) sepia(82%) saturate(498%) hue-rotate(341deg) brightness(98%) contrast(101%);
+    transform: scale(1.1);
 }
 .payment-summary {
     padding-bottom: 5px;
