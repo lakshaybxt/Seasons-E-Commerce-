@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: rgb(251, 251, 251);
+}
 .nav-bar {
     top: 0;
 }
@@ -77,12 +81,14 @@
 .overview, 
 .my-orders,
 .my-payments,
+.my-home,
 .my-profile {
     border-bottom: 1px solid rgb(199, 203, 212);
 }
 .overview span, 
 .my-orders span,
 .my-payments span,
+.my-home span
 .my-profile span,
 .my-logout span {
     text-overflow: ellipsis;
@@ -98,6 +104,7 @@
 .overview span:hover, 
 .my-orders span:hover,
 .my-payments span:hover,
+.my-home span:hover,
 .my-profile span:hover{
     color: #207BB4;
     font-weight: 500;
@@ -105,6 +112,7 @@
 .overview:hover, 
 .my-orders:hover,
 .my-payments:hover,
+.my-home:hover,
 .my-profile:hover {
     border-bottom: 1px solid #207BB4;
 }
@@ -112,6 +120,7 @@
 .overview:hover span, 
 .my-orders:hover span,
 .my-payments:hover span,
+.my-home:hover span,
 .my-profile:hover span {
     font-weight: 500;
     color: #207BB4;
@@ -121,6 +130,7 @@
 .overview:hover img,
 .my-orders:hover img,
 .my-payments:hover img,
+.my-home:hover img,
 .my-profile:hover img {
     filter: invert(28%) sepia(48%) saturate(1078%) hue-rotate(184deg) brightness(92%) contrast(90%);
     /* transition: filter 0.3s ease-in-out;  */
@@ -185,6 +195,8 @@
 }
 .product-image img {
     height: 100%;
+    border-radius: 7px;
+    pointer-events: none;
 }
 .product-details {
     display: flex;
@@ -293,6 +305,7 @@
     .overview, 
     .my-orders,
     .my-payments,
+    .my-home,
     .my-profile {
     border: none;
     }

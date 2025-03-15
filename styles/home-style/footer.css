@@ -18,7 +18,6 @@
 }
 .footer-seasons-logo {
     filter: brightness(0) saturate(100%) invert(70%) sepia(100%) saturate(500%) hue-rotate(-10deg);
-    margin-left: -10px;
     width: 100px;
 }
 .footer-main {

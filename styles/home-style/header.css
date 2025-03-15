@@ -113,7 +113,8 @@ body {
     pointer-events: none;
 }
 .seasons-logo {
-    height: 70px;
+    height: 40px;
+    width: 100%;
     width: 100px;
     margin-right: 16px;
 }
