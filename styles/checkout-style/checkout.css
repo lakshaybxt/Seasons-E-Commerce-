@@ -7,23 +7,26 @@ body {
 }
 /* Lower Header */
 .nav-bar {
-    display: flex;
+    width: 100%;
+    /* padding-left: 1000px; */
+    /* display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; */
 }
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     border-bottom: 1px solid #e0e0e0;
     position: fixed;
-    height: 55px;
+    height: 45px;
+    max-width: 100%;
     top: 0;
     background-color: white; 
     z-index: 999;
     left: 0;
     right: 0;
-    padding: 8px 50px;
+    padding: 18px 50px;
 }
 .nav-right span {
     margin-right: 20px;
@@ -70,6 +73,11 @@ body {
     width: 100px;
     margin-right: 16px;
 }
+.season-mobile-logo {
+    height: 50px;
+    width: 60px;
+    display: none;
+}
 @media (max-width: 880px) {
     .nav {
         top: 0;
@@ -90,12 +98,20 @@ body {
         font-weight: 500;
         margin-bottom: 5px;
     }
-    .seasons-logo {
+    /* .seasons-logo {
         height: 80px;
         width: 110px;
         object-fit: fill;
-    }
+    } */
     .login-mail {
         font-size: 14px;
+    }
+}
+@media(max-width: 550px) {
+    .seasons-logo-off {
+        display: none;
+    }
+    .season-mobile-logo {
+        display: initial;
     }
 }

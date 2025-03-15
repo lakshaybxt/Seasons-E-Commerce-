@@ -220,9 +220,6 @@ body {
         max-width: 170px;
         max-height: 170px;
     }
-    .login {
-        display: none;
-    }
     .search-input {
         width: 140px;
     }
@@ -253,9 +250,6 @@ body {
     }
   
     .product-actions {
-      /* grid-column: auto; undos grid-column: 2; from above.
-         This element will now be placed in its normal column
-         in the grid. */
       grid-column: auto;
       margin-bottom: 70px;
     }
