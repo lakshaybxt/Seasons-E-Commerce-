@@ -1,4 +1,4 @@
-import { cart, removeFromCart, calculateCartQuantity } from './data/cart.js';
+import { cart, removeFromCart, calculateCartQuantity, updateQuantity } from './data/cart.js';
 import { products } from './data/products.js';
 
 let catSummaryHTML = ``;
@@ -132,9 +132,10 @@ document.querySelectorAll('.save-quantity-link')
             const productId = link.dataset.productId;
 
             const container = document.querySelector(`.js-item-container-${productId}`);
-            document.querySelector(`.js-qunatity-input-${productId}`);
+            container.classList.remove('is-editing-quantity');
 
-            const quantityInput = container.classList.remove('is-editing-quantity');
+            const quantityInput = document.querySelector(`.js-qunatity-input-${productId}`);
             const newQuantity = Number(quantityInput.value);
+            updateQuantity(productId, newQuantity);
         });
     });
