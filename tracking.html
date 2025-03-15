@@ -3,85 +3,114 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Seasons</title>
+	<title>Seasons/tracking</title>
 	<link rel="stylesheet" href="styles/home-style/header.css">
-	<link rel="stylesheet" href="styles/home-style/home.css">
 	<link rel="stylesheet" href="styles/home-style/footer.css">
+	<link rel="stylesheet" href="styles/tracking.css">
 	<link rel="shortcut icon" href="images/seasons-favicon.webp" type="image/x-icon">
 </head>
 <body>
-	<header class="home-header">
-		<div class="left-links">
-			<a href="#">Offers</a>
-        <a href="#">Fanbook</a>
-        <a href="#">📱 Download App</a>
-        <a href="https://www.google.com/maps/dir//AM-191,+Shaheed+Udham+Singh+Marg,+Block+AO,+Poorbi+Shalimar+Bag,+Shalimar+Bagh,+Delhi,+110088/@28.702913,77.1584923,13z/data=!4m9!4m8!1m0!1m5!1m1!1s0x390d038d983c780d:0x3c58979cf346a246!2m2!1d77.1584923!2d28.702913!3e0?entry=ttu&g_ep=EgoyMDI1MDMwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">Find a store near me</a>
-    </div>
-    <div class="right-links">
-        <a href="#">Contact Us</a>
-        <a href="#">Track Order</a>
-		</div>
-	</header>
-
 	<header class="nav-bar">
-		<!-- Logo & Category -->
 		<div class="nav-left">
-			<img class="seasons-logo" src="images/Seasons (1).png">
+			<a class="logo" href="home.html">
+				<img class="seasons-logo" src="images/Seasons (1).png">
+			</a>
 			<nav>
 				<a class="nav-left-content" href="#">CLOTHING</a>
 				<a class="nav-left-content" href="#">OTHERS</a>
 			</nav>
 		</div>
-		<!-- Search bar -->
 		<div class="nav-middle">
 			<button class="search-button"><img src="images/search.svg"></button>
 			<input class="search-input" placeholder="Search by products">
 		</div>
-		<!-- Login & Bag -->
 		<div class="nav-right">
 			<span class="nav-right-sep">|</span>
-			<a href="#">LOGIN</a>
+			<a class="login" href="#">LOGIN</a>
 			<a href="checkout.html" class="cart-icon">
 				<img src="./images/shop.svg">
-				<span class="nav-right-quantity js-nav-right-quantity"></span>
+				<span class="nav-right-quantity js-nav-right-quantity">0</span>
 			</a>
 		</div>
 	</header>
 
-	<!-- Animation - Avertised -->
-	<div class="carousel">
-    <div class="carousel-track">
-			<img src="images/Advertisment-images/Denim.jpg" alt="Image">
-			<img src="images/Advertisment-images/dress.webp" alt="Image">
-			<img src="images/Advertisment-images/oversized.webp" alt="Image">
-			<img src="images/Advertisment-images/Denim.jpg" alt="Image">
-			<img src="images/Advertisment-images/shorts.webp" alt="Image">
-			<img src="images/Advertisment-images/others/Bag.webp" alt="Image">
-			<img src="images/Advertisment-images/tshirt.webp" alt="Image">
-			<img src="images/Advertisment-images/fir-tshirt.webp" alt="Image">
-			<img src="images/Advertisment-images/others/shoes.gif" alt="Image">
-			<img src="images/Advertisment-images/others/Shoes2.webp" alt="Image">
-			<img src="images/Advertisment-images/others/Cap.webp" alt="Image">
-			<!-- Duplicates -->
-			<img src="images/Advertisment-images/Denim.jpg" alt="Image">
-			<img src="images/Advertisment-images/dress.webp" alt="Image">
-			<img src="images/Advertisment-images/oversized.webp" alt="Image">
-			<img src="images/Advertisment-images/Denim.jpg" alt="Image">
-			<img src="images/Advertisment-images/shorts.webp" alt="Image">
-			<img src="images/Advertisment-images/others/Bag.webp" alt="Image">
-			<img src="images/Advertisment-images/tshirt.webp" alt="Image">
-			<img src="images/Advertisment-images/fir-tshirt.webp" alt="Image">
-			<img src="images/Advertisment-images/others/shoes.gif" alt="Image">
-			<img src="images/Advertisment-images/others/Shoes2.webp" alt="Image">
-			<img src="images/Advertisment-images/others/Cap.webp" alt="Image"> 
-		</div>
-	</div>
-
-	<div class="mid-collections">Latest Collections</div>
-
-	<!-- Products -->
 	<main class="main">
-		<div class="products-grid">
+		<div class="all-orders">
+			<a class="view-orders" href="orders.html">
+				VIEW ALL ORDERS
+			</a>
+		</div>
+		<div class="orders-grid">
+			
+			<div class="basic-overview">
+				<div class="overview">
+					<a href="#">
+						<img src="images/tracking-utils/Overview.svg">
+						<span>Overview</span>
+					</a>
+				</div>
+				<div class="my-orders">
+					<a href="tracking.html">
+						<img src="images/tracking-utils/orders.svg">
+						<span>My Orders</span>
+					</a>
+				</div>
+				<div class="my-payments">
+					<a href="tracking.html">
+						<img src="images/tracking-utils/payment.svg">
+						<span>My Payments</span>
+					</a>
+				</div>
+				<div class="my-profile">
+					<a href="#">
+						<img src="images/tracking-utils/person.svg">
+						<span>My Profile</span>
+					</a>
+				</div>
+				<div class="my-logout">
+					<a href="#">
+						<img src="images/tracking-utils/logout.svg">
+						<span>Logout</span>
+					</a>
+				</div>
+
+			</div>
+
+			<div class="orders-tracking">
+				
+				<div class="order-details">
+					<div class="order-status">
+						<div class="order">Order: <span>Preparing</span></div>
+						<div>Order arriving on 13 Mar 2025</div>
+					</div>
+					<div class="product-summary">
+						<div class="product-image">
+							<img src="images/product-images/Batman-tshirt.webp">
+						</div>
+						<div class="product-details">
+							<span class="season-logo">Seasons®</span>
+							<span>Men's Black Panther Mech Graphic Printed Oversized T-shirt</span>
+							<span>Quantity: 1</span>
+							<span>Price: ₹699</span>
+							<div class="progress-label-container">
+								<div class="progress-label">
+									<img src="images/tracking-utils/preparing.svg">
+								</div>
+								<div class="progress-label current-status">
+									<img src="images/tracking-utils/shipped.svg">
+								</div>
+								<div class="progress-label">
+									<img src="images/tracking-utils/preparing.svg">
+								</div>
+							</div>
+							<div class="progress-bar-container">
+								<div class="progress-bar"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
 		</div>
 	</main>
 
@@ -139,6 +168,6 @@
       <p>All rights are reserved to Lakshay &copy; 2025</p>
 		</div>
 	</footer>
-	<script type="module" src="./scripts/home.js"></script>
+	<script src="scripts/tracking.js"></script>
 </body>
 </html>
