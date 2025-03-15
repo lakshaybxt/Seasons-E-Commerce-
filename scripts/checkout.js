@@ -128,24 +128,31 @@ document.querySelectorAll('.js-update-link')
 
 document.querySelectorAll('.js-save-quantity-link')
     .forEach((link) => {
+        const productId = link.dataset.productId;
+        const quantityInput = document.querySelector(`.js-quantity-input-${productId}`);
         link.addEventListener('click', () => {
-            const productId = link.dataset.productId;
-            
-            const quantityInput = document.querySelector(`.js-quantity-input-${productId}`);
-            const newQuantity = Number(quantityInput.value);
-            
-            if(newQuantity <= 0 || newQuantity >= 1000) {
-                alert('Quantity must be at least 1 and less than 1000');
-                return;
-            }
-            
-            updateQuantity(productId, newQuantity);
-            
-            const container = document.querySelector(`.js-item-container-${productId}`);
-            container.classList.remove('is-editing-quantity');
-            
-            const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`);
-            quantityLabel.textContent = newQuantity;
-            updateCartQuantity();
+            //helper function
+            handleUpdateQuantity(productId, quantityInput);
+        });
+
+        quantityInput.addEventListener('keydown', (event) => {
+            if(event.key === 'Enter') handleUpdateQuantity(productId, quantityInput);
         });
     });
+
+function handleUpdateQuantity(productId, quantityInput) {
+    const newQuantity = Number(quantityInput.value);
+    if(newQuantity <= 0 || newQuantity >= 1000) {
+        alert('Quantity must be at least 1 and less than 1000');
+        return;
+    }
+    
+    updateQuantity(productId, newQuantity);
+    
+    const container = document.querySelector(`.js-item-container-${productId}`);
+    container.classList.remove('is-editing-quantity');
+    
+    const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`);
+    quantityLabel.textContent = newQuantity;
+    updateCartQuantity();
+}

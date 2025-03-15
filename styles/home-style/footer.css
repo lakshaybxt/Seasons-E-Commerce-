@@ -59,7 +59,7 @@
 .customer-service input {
     background-color: #000000;
     border: none;
-    border-bottom: 2px solid #ff6f00;
+    border-bottom: 2px solid #ffd033; 
     padding: 0 0 0 10px;
     height: 34px;
     width: 57%;
@@ -83,6 +83,10 @@
 } 
 .input-email {
     display: flex;
+}
+.input-email input::placeholder {
+    color: rgb(230, 223, 223);
+    font-family: "Montserrat", sans-serif;
 }
 .lower-content {
     display: block;
