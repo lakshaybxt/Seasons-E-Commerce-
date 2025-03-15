@@ -1,4 +1,4 @@
-import { cart, addToCart, updateCartQuantity } from "./data/cart.js";
+import { cart, addToCart, calculateCartQuantity } from "./data/cart.js";
 import { products } from "./data/products.js";
 
 let productsHTML = ``;
@@ -59,11 +59,12 @@ products.forEach((product) => {
 
 document.querySelector('.products-grid').innerHTML = productsHTML;
 
-//update page summary
-function updatePageSummary() {
-    const cartQuantity = updateCartQuantity();
-    document.querySelector('.js-nav-right-quantity').innerHTML = cartQuantity;
+function updateCartQuantity() {
+    let cartQuantity = calculateCartQuantity();
+    document.querySelector('.js-nav-right-quantity').innerHTML = cartQuantity;    
 }
+
+updateCartQuantity()
 
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
      //by using a closure we are giving each added button a unique id
@@ -74,7 +75,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         let productId = button.dataset.productId;
 
         addToCart(productId);
-        updatePageSummary();
+        updateCartQuantity();
 
         const addedMessage = document.querySelector(`.js-add-to-cart-${productId}`);
         addedMessage.classList.add('added-to-cart-visible');
