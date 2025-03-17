@@ -2,6 +2,7 @@ import { cart, removeFromCart, calculateCartQuantity, updateQuantity, updateDeli
 import { products, getProduct } from '../data/products.js';
 import { deliveryOptions, getDeliveryOption } from '../data/deliveryOption.js';
 import dayjs from 'https://unpkg.com/dayjs@1.11.10/esm/index.js';
+import { renderPaymentSummary } from './paymentSummary.js';
 
 
 export function renderOrderSummary() {
@@ -105,6 +106,7 @@ export function renderOrderSummary() {
                 
                 if(container) container.remove();
                 updateCartQuantity();
+                renderPaymentSummary();
             });
         });
 
@@ -155,6 +157,7 @@ export function renderOrderSummary() {
         const quantityLabel = document.querySelector(`.js-quantity-label-${productId}`);
         quantityLabel.textContent = newQuantity;
         updateCartQuantity();
+        renderPaymentSummary(); //by me
     }
 
     document.querySelectorAll('.js-delivery-option')
@@ -165,6 +168,7 @@ export function renderOrderSummary() {
                 const { productId, deliveryOptionId } = element.dataset;
                 updateDeliveryOption(productId, deliveryOptionId);
                 renderOrderSummary();  
+                renderPaymentSummary();
             })
         });
 }
