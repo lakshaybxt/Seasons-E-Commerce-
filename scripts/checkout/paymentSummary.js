@@ -1,4 +1,4 @@
-import { cart } from '../data/cart.js';
+import { cart, calculateCartQuantity } from '../data/cart.js';
 import { getProduct } from '../data/products.js';
 import { getDeliveryOption } from '../data/deliveryOption.js';
 
@@ -25,7 +25,7 @@ export function renderPaymentSummary() {
         </div>
 
         <div class="payment-summary-row">
-            <div>Total MRP (2) </div>
+            <div>Total MRP (${calculateCartQuantity()}) </div>
             <div class="payment-summary-money">₹${productPrice}</div>
         </div>
         <div class="payment-summary-row">
