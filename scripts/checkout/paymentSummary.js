@@ -1,6 +1,6 @@
-import { cart, calculateCartQuantity } from '../data/cart.js';
-import { getProduct } from '../data/products.js';
-import { getDeliveryOption } from '../data/deliveryOption.js';
+import { cart, calculateCartQuantity } from '../../data/cart.js';
+import { getProduct } from '../../data/products.js';
+import { getDeliveryOption } from '../../data/deliveryOption.js';
 
 export function renderPaymentSummary() {
     let productPrice = 0;
