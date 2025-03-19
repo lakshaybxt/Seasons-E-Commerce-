@@ -3,7 +3,7 @@ function Cart(localStorageKey) {
         cartItems: undefined,
 
         loadFromStorage() {
-            this.cartItems = JSON.parse(localStorage.getItem('cart')) || [{
+            this.cartItems = JSON.parse(localStorage.getItem(localStorageKey)) || [{
                 productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
                 quantity: 2,
                 deliveryOptionId: '1'
@@ -53,7 +53,7 @@ function Cart(localStorageKey) {
         },
 
         removeFromCart(productId) {
-            this.cartItems = this.cartItem.filter((cartItem) => {
+            this.cartItems = this.cartItems.filter((cartItem) => {
                 return (cartItem.productId !== productId);
             });
             this.saveToStorage();
