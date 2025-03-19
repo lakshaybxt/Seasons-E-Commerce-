@@ -9,6 +9,30 @@ export function getProduct(productId) {
     return matchingProduct;
 }
 
+class Product {
+    id;
+    image;
+    rating;
+    name;
+    price;
+
+    constructor(productDetails) {
+        this.id = productDetails.id;
+        this.image = productDetails.image;
+        this.rating= productDetails.rating;
+        this.name = productDetails.name;
+        this.price = productDetails.price;
+    }
+
+    getStarsURL() {
+        return `images/ratings/rating-${this.rating.stars * 10}.png`;
+    }
+
+    getPrice() {
+        return `₹${this.price}`;
+    }
+}
+
 export const products = [{
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/product-images/Batman-tshirt.webp",
@@ -319,4 +343,6 @@ export const products = [{
         "Hoodie",
         "t-shirt"
     ]
-}];
+}].map((productDetails) => {
+    return new Product(productDetails);
+});

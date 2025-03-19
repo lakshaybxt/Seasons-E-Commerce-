@@ -11,7 +11,7 @@ products.forEach((product) => {
                 <!-- stars -->
                 <div class="product-rating-container">
                     <img class="product-rating-stars"
-                        src="images/ratings/rating-${product.rating.stars * 10}.png">
+                        src="${product.getStarsURL()}">
                     <span class="product-rating-count link-primary">
                         ${product.rating.count}
                     </span>
@@ -46,7 +46,7 @@ products.forEach((product) => {
                     </div>
                     <!-- added a data attribute -->
                     <button class="add-to-cart-button js-add-to-cart js-add-to-cart-${product.id}"
-                    data-product-id="${product.id}">
+                    data-product-id="${product.getPrice()}">
                         ADD TO BAG
                     </button>
                 </div>
