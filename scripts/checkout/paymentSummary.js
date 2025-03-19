@@ -1,4 +1,5 @@
-import { cart, calculateCartQuantity } from '../../data/cart.js';
+// import { cart, calculateCartQuantity } from '../../data/cart.js';
+import { cart } from '../../data/cart-class.js';
 import { getProduct } from '../../data/products.js';
 import { getDeliveryOption } from '../../data/deliveryOption.js';
 
@@ -6,7 +7,7 @@ export function renderPaymentSummary() {
     let productPrice = 0;
     let shippingPrice = 0;
 
-    cart.forEach((cartItem) => {
+    cart.cartItems.forEach((cartItem) => {
         const product = getProduct(cartItem.productId);
         productPrice += product.price * cartItem.quantity;
 
@@ -25,7 +26,7 @@ export function renderPaymentSummary() {
         </div>
 
         <div class="payment-summary-row">
-            <div>Total MRP (${calculateCartQuantity()}) </div>
+            <div>Total MRP (${cart.calculateCartQuantity()}) </div>
             <div class="payment-summary-money">₹${productPrice}</div>
         </div>
         <div class="payment-summary-row">

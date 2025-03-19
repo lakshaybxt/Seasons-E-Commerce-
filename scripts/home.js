@@ -1,4 +1,4 @@
-import { cart, addToCart, calculateCartQuantity } from '../data/cart.js';
+import { cart } from '../data/cart-class.js';
 import { products } from '../data/products.js';
 
 let productsHTML = ``;
@@ -60,7 +60,7 @@ products.forEach((product) => {
 document.querySelector('.products-grid').innerHTML = productsHTML;
 
 function updateCartQuantity() {
-    let cartQuantity = calculateCartQuantity();
+    let cartQuantity = cart.calculateCartQuantity();
     document.querySelector('.js-nav-right-quantity').innerHTML = cartQuantity;    
 }
 
@@ -74,7 +74,7 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         //Here we getting each button seperately by the data attribure
         let productId = button.dataset.productId;
 
-        addToCart(productId);
+        cart.addToCart(productId);
         updateCartQuantity();
 
         const addedMessage = document.querySelector(`.js-add-to-cart-${productId}`);

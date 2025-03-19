@@ -1,5 +1,4 @@
 class Cart {
-    
     cartItems;
     #localStorageKey;
 
@@ -95,12 +94,14 @@ class Cart {
         this.saveToStorage();
     }
 }
-
-
+//created an object of cart for our cart
 const cart = new Cart('cart-oop');
+/*
+// can be used for business - no need now
 const businessCart = new Cart('cart-business');
 
 console.log(cart);
 console.log(businessCart);
-
 console.log(businessCart instanceof Cart);
+*/
+export { cart };
