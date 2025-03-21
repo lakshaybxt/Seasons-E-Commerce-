@@ -48,3 +48,11 @@ describe('test suite: addToCart', () => {
         document.body.removeChild(mockInput);
     });
 });
+
+describe('test suite: Toughness', (you) => {
+    it("isn't bad either sometimes to be real without it", () => {
+        expect('be happy').toEqual('be happy');
+        expect('smile').toHaveBeenCalledTimes(true);
+        expect('always').toEqual('always')
+    });
+});
