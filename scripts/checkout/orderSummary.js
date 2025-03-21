@@ -1,17 +1,22 @@
 // import { cart, removeFromCart, calculateCartQuantity, updateQuantity, updateDeliveryOption } from '../../data/cart.js';
 import { cart } from '../../data/cart-class.js';
-import { products, getProduct } from '../../data/products.js';
+import { products, getProduct, loadProducts } from '../../data/products.js';
 import { deliveryOptions, getDeliveryOption, calculateDeliveryDate } from '../../data/deliveryOption.js';
 import { renderPaymentSummary } from './paymentSummary.js';
 
-
+// loadProducts(() => {
+//     renderOrderSummary();
+// });
 export function renderOrderSummary() {
 
     let cartSummaryHTML = ``;
 
     cart.cartItems.forEach((cartItem) => {
         const productId = cartItem.productId;
+        // console.log('Cart Items:', cart.cartItems);
+        // console.log('All Products:', products);
         const matchingProduct = getProduct(productId);
+        // console.log(matchingProduct);
 
         const deliveryOptionId = cartItem.deliveryOptionId;
         const deliveryOption = getDeliveryOption(deliveryOptionId);
@@ -20,7 +25,6 @@ export function renderOrderSummary() {
 
         cartSummaryHTML += `
             <div class="cart-item-container js-item-container-${matchingProduct.id}">
-                <!-- delete button -->
                 <span class="delete-button js-delete-button" data-product-id="${matchingProduct.id}"><img src="images/close.svg"></span>
                 <div class="cart-item-details-grid">
                     <img class="product-image" src="${matchingProduct.image}">
@@ -168,4 +172,3 @@ export function renderOrderSummary() {
         });
 }
 
-renderOrderSummary();

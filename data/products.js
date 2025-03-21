@@ -33,6 +33,30 @@ class Product {
     }
 }
 
+export let products = [];
+
+export function loadProducts(fun) {
+    const xhr = new XMLHttpRequest();
+
+    xhr.addEventListener('load', () => {
+        products = JSON.parse(xhr.response).map((productDetails) => {
+            return new Product(productDetails);
+        });
+
+        console.log('load products');
+        fun();
+    });
+
+    xhr.addEventListener('error', (error) => {
+        console.log('Unexpected error. Please try again later!');
+    })
+    xhr.open('GET', 'https://gist.githubusercontent.com/lakshaybxt/efe060afd31d45be49454e1514a62961/raw/c22d3b248c6f5b3657db98e0a438066beb1bbeaa/products.json');
+    xhr.send();
+}
+
+loadProducts();
+
+/*
 export const products = [{
     id: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
     image: "images/product-images/Batman-tshirt.webp",
@@ -586,3 +610,4 @@ export const products = [{
 }].map((productDetails) => {
     return new Product(productDetails);
 });
+*/

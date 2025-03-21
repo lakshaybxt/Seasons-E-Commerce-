@@ -141,6 +141,9 @@
     background-color: #e0e0e0;
     border: 1px solid #e0e0e0;
 }
+.select-qty:focus {
+    outline: none;
+}
 .add-to-cart-button {
     background-color: #ffd033; 
     font-family: "Montserrat", sans-serif;
