@@ -343,6 +343,246 @@ export const products = [{
         "Hoodie",
         "t-shirt"
     ]
+}, {
+    id: "a93a101d-79ef-4cf3-a6cf-6dbe532a1b4a",
+    image: "images/product-images/men-s-grey-oversized-shirt-649873-1740573902-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 119
+    },
+    name: "Men's Grey Oversized Shirt",
+    price: 1299,
+    keywords: [
+        "Men",
+        "Grey",
+        "Oversized",
+        "Shirt"
+    ]
+}, {
+    id: "4f4fbcc2-4e72-45cc-935c-9e13d79cc57f",
+    image: "images/product-images/men-s-beige-checked-oversized-shirt-651169-1734610849-1.webp",
+    rating: {
+        stars: 4,
+        count: 326
+    },
+    name: "Men's Beige Checked Oversized Shirt",
+    price: 1499,
+    keywords: [
+        "Men",
+        "Checked",
+        "Oversized",
+        "Shirt"
+    ]
+}, {
+    id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
+    image: "images/product-images/women-s-white-all-over-printed-midi-dress-645119-1733230874-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 2556
+    },
+    name: "Women's Off White All Over Printed Midi Dress",
+    price: 1399,
+    keywords: [
+        "Women",
+        "White",
+        "Dress"
+    ]
+}, {
+    id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
+    image: "images/product-images/women-s-white-bodycon-dress-647147-1728912788-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 2286
+    },
+    name: "Women's White & Red All Over Printed Flared Dress",
+    price: 899,
+    keywords: [
+        "Women",
+        "Dress",
+        "Flared"
+    ]
+}, {
+    id: "19c6a64a-5463-4d45-9af8-e41140a4100c",
+    image: "images/product-images/women-s-black-slim-fit-bodycon-midi-dress-644913-1732884769-1.webp",
+    rating: {
+        stars: 4,
+        count: 456
+    },
+    name: "Women's Black Slim Fit Bodycon Midi Dress",
+    price: 1199,
+    keywords: [
+        "Women",
+        "Black",
+        "Slim",
+        "Fit",
+        "Dress"
+    ]
+}, {
+    id: "d2785924-743d-49b3-8f03-ec258e640503",
+    image: "images/product-images/men-s-black-yellow-dark-knight-color-block-high-top-sneakers-630672-1718715099-1.webp",
+    rating: {
+        stars: 5,
+        count: 83
+    },
+    name: "Men's Black & Yellow Dark Knight Color Block High Top Sneakers",
+    price: 1699,
+    keywords: [
+        "Men",
+        "Sneakers",
+        "Yellow",
+        "Black",
+        "Block",
+        "Low",
+        "Top"
+    ]
+
+}, {
+    id: "ee1f7c56-f977-40a4-9642-12ba5072e2b0",
+    image: "images/product-images/men-s-black-beige-stark-latte-color-block-sneakers-640591-1725605377-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 9017
+    },
+    name: "Tony Stark Black & Beige Color Block Low Top Sneakers",
+    price: 1699,
+    keywords: [
+        "Men",
+        "Sneakers",
+        "Tony",
+        "Black",
+        "Block",
+        "Low",
+        "Top"
+    ]
+}, {
+    id: "1c079479-8586-494f-ab53-219325432536",
+    image: "images/product-images/b-star-sling-bag-476642-1655815006-1.webp",
+    rating: {
+        stars: 4,
+        count: 229
+    },
+    name: "Unisex Black B Star Sling Bag",
+    price: 469,
+    keywords: [
+        "Unisex",
+        "Bag",
+        "Black"
+    ]
+}, {
+    id: "4df68c27-fd59-4a6a-bbd1-e754ddb6d53c",
+    image: "images/product-images/men-s-black-white-akatsuki-typography-oversized-varsity-shorts-634302-1734342448-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 428
+    },
+    name: "Men's Black & White Akatsuki Typography Oversized Varsity Shorts",
+    price: 899,
+    keywords: [
+        "Men",
+        "Akatsuki",
+        "Oversized",
+        "Shorts"
+    ]
+}, {
+    id: "44e37dd03-3b23-4bc6-9ff8-44e112a92c64",
+    image: "images/product-images/women-s-black-orange-all-over-printed-skorts-635443-1729513019-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 311
+    },
+    name: "Women's Black & Orange All Over Printed Skorts",
+    price: 899,
+    keywords: [
+        "Women",
+        "Black",
+        "Orange",
+        "Printed",
+        "Shorts",
+        "Skorts"
+    ]
+}, {
+    id: "a434b69f-1bc1-482d-9ce7-cd7f4a66ce8d",
+    image: "images/product-images/men-s-brown-minion-badge-graphic-printed-oversized-t-shirt-596526-1742219511-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 130
+    },
+    name: "Men's Brown Minion Badge Graphic Printed Oversized T-shirt",
+    price: 569,
+    keywords: [
+        "Men",
+        "Minion",
+        "Oversized",
+        "t-shirt",
+        "Printed",
+        "Graphic"
+    ]
+}, {
+    id: "a45cfa0a-66d6-4dc7-9475-e2b01595f7d7",
+    image: "images/product-images/men-s-blue-create-good-stories-graphic-printed-oversized-vest-637444-1724051693-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 248
+    },
+    name: "Men's Blue Create Good Stories Graphic Printed Oversized Vest",
+    price: 569,
+    keywords: [
+        "Men",
+        "Vest",
+        "Oversized",
+        "Printed",
+        "Vest"
+    ]
+}, {
+    id: "d339adf3-e004-4c20-a120-40e8874c66cb",
+    image: "images/product-images/men-s-jet-black-doom-graphic-printed-oversized-t-shirt-648705-1738066522-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 117
+    },
+    name: "Men's Jet Black Doom Graphic Printed Oversized T-shirt",
+    price: 799,
+    keywords: [
+        "Men",
+        "Doom",
+        "Oversized",
+        "Graphic",
+        "t-shirt",
+        "Printed"
+    ]
+}, {
+    id: "d37a651a-d501-483b-aae6-a9659b0757a0",
+    image: "images/product-images/women-s-black-double-trouble-graphic-printed-oversized-t-shirt-654682-1740739610-1.webp",
+    rating: {
+        stars: 4,
+        count: 126
+    },
+    name: "Women's Black Double Trouble Graphic Printed Oversized T-shirt",
+    price: 799,
+    keywords: [
+        "Women",
+        "Black",
+        "Oversized",
+        "Graphic",
+        "t-shirt",
+        "Printed"
+    ]
+}, {
+    id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
+    image: "images/product-images/men-s-grey-eternity-graphic-printed-oversized-t-shirt-596129-1735645993-1.webp",
+    rating: {
+        stars: 4.5,
+        count: 1211
+    },
+    name: "Men's Grey Eternity Graphic Printed Oversized T-shirt",
+    keywords: [
+        "Men",
+        "Eternity",
+        "Oversized",
+        "Graphic",
+        "t-shirt",
+        "Printed"
+    ]
 }].map((productDetails) => {
     return new Product(productDetails);
 });
