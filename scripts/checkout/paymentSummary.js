@@ -2,6 +2,7 @@
 import { cart } from '../../data/cart-class.js';
 import { getProduct } from '../../data/products.js';
 import { getDeliveryOption } from '../../data/deliveryOption.js';
+import { addOrder } from '../../data/orders.js';
 
 export function renderPaymentSummary() {
     let productPrice = 0;
@@ -45,10 +46,32 @@ export function renderPaymentSummary() {
             <div>Subtotal</div>
             <div class="payment-summary-money">₹${total}</div>
         </div>
-        <button class="place-order-button button-primary">
+        <button class="place-order-button button-primary js-place-order-button">
             PROCEED
         </button>
     `;
     document.querySelector('.js-payment-summary').innerHTML = pymentSummaryHTML;
-    // console.log(pymentSummaryHTML);
+    
+    //here i'm sending code to backend instead of creating by js
+    document.querySelector('.js-place-order-button')
+        .addEventListener('click', async () => {
+            try {
+                const response = await fetch('https://supersimplebackend.dev/orders', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        cart: cart.cartItems
+                    })
+                });
+                const order = await response.json();
+                // console.log(order);
+                addOrder(order);
+            } catch(error) {
+                console.log('Unexpected error. Try again later.')
+            }
+            
+            window.location.href = 'orders.html';
+        });
 }
