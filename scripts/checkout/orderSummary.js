@@ -1,6 +1,6 @@
 // import { cart, removeFromCart, calculateCartQuantity, updateQuantity, updateDeliveryOption } from '../../data/cart.js';
 import { cart } from '../../data/cart-class.js';
-import { products, getProduct, loadProducts } from '../../data/products.js';
+import { products, getProduct } from '../../data/products.js';
 import { deliveryOptions, getDeliveryOption, calculateDeliveryDate } from '../../data/deliveryOption.js';
 import { renderPaymentSummary } from './paymentSummary.js';
 

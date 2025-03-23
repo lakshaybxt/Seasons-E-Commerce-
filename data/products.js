@@ -35,6 +35,26 @@ class Product {
 
 export let products = [];
 
+export function loadProductsFetch() {
+    const promise = fetch(
+        'https://gist.githubusercontent.com/lakshaybxt/efe060afd31d45be49454e1514a62961/raw/c22d3b248c6f5b3657db98e0a438066beb1bbeaa/products.json'
+    ).then((response) => {
+        return response.json();
+
+    }).then((productsData) => {
+        products = productsData.map((productDetails) => {
+            return new Product(productDetails);
+        });
+    });
+    return promise;
+}
+
+/*
+loadProductsFetch().then(() => {
+    console.log('next step');
+});
+*/
+/*
 export function loadProducts(fun) {
     const xhr = new XMLHttpRequest();
 
@@ -53,8 +73,9 @@ export function loadProducts(fun) {
     xhr.open('GET', 'https://gist.githubusercontent.com/lakshaybxt/efe060afd31d45be49454e1514a62961/raw/c22d3b248c6f5b3657db98e0a438066beb1bbeaa/products.json');
     xhr.send();
 }
-
+    
 loadProducts();
+*/
 
 /*
 export const products = [{
