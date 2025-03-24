@@ -55,3 +55,18 @@ carousel.addEventListener("touchend", () => {
     isDragging = false;
     track.style.animationPlayState = "running";
 });
+
+function shuffleItems() {
+    let container = document.getElementById("shuffleContainer");
+    let items = Array.from(container.children);
+
+    for(let i = items.length - 1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i + 1));
+        [items[i], items[j]] = [items[j], items[i]];
+    }
+
+    container.innerHTML = "";
+    items.forEach(item => container.append(item));
+}
+
+window.onload = shuffleItems;
