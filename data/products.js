@@ -42,7 +42,7 @@ export function loadProductsFetch() {
         return response.json();
 
     }).then((productsData) => {
-        productsData = shuffleArray(productsData); //shuffle the cart everytime
+        productsData = shuffleArray(productsData); //just shuffle the cart -- everytime
         products = productsData.map((productDetails) => {
             return new Product(productDetails);
         });
