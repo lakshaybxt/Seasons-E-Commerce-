@@ -37,11 +37,12 @@ export let products = [];
 
 export function loadProductsFetch() {
     const promise = fetch(
-        'https://gist.githubusercontent.com/lakshaybxt/efe060afd31d45be49454e1514a62961/raw/c22d3b248c6f5b3657db98e0a438066beb1bbeaa/products.json'
+        'https://gist.githubusercontent.com/lakshaybxt/efe060afd31d45be49454e1514a62961/raw/32d2dcfbc8a6c3d4bb5aae62d62ca45cd83d5d14/products.json'
     ).then((response) => {
         return response.json();
 
     }).then((productsData) => {
+        productsData = shuffleArray(productsData); //shuffle the cart everytime
         products = productsData.map((productDetails) => {
             return new Product(productDetails);
         });
@@ -49,6 +50,14 @@ export function loadProductsFetch() {
         console.log('Unexpected error. Please try again later.');
     })
     return promise;
+}
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 /*
