@@ -2,6 +2,12 @@
 
 This is a simple e-commerce website built using **HTML, CSS, and JavaScript**. It includes multiple pages for shopping, order tracking, and checkout.
 
+## 🚀 Live Demo
+
+Check out the live version of the project here:  
+🔗 **[Seasons E-Commerce Live](https://your-live-link.com)**  
+
+
 ## 🚀 Features
 
 - 🏠 **Home Page** - Displays product listings.
