@@ -5,7 +5,7 @@ This is a simple e-commerce website built using **HTML, CSS, and JavaScript**. I
 ## 🚀 Live Demo
 
 Check out the live version of the project here:  
-🔗 **[Seasons E-Commerce Live](https://your-live-link.com)**  
+🔗 **[Seasons E-Commerce Live](https://seasons-e-commerce.netlify.app/)**  
 
 
 ## 🚀 Features
