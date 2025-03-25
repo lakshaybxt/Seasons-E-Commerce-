@@ -15,6 +15,7 @@ class Product {
     rating;
     name;
     price;
+    keywords;
 
     constructor(productDetails) {
         this.id = productDetails.id;
@@ -22,6 +23,7 @@ class Product {
         this.rating= productDetails.rating;
         this.name = productDetails.name;
         this.price = productDetails.price;
+        this.keywords = productDetails.keywords
     }
 
     getStarsURL() {
