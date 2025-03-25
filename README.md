@@ -1,12 +1,3 @@
-# Seasons-E-Commerce
-Seasons (E-Commerce) Website
-
-# Thing i have to do after learning backend:
-
-1. Order.js
-- need to create the backend for order.js
-- which should be done in payment syummary
-
 # 🛒 Seasons E-Commerce Website
 
 This is a simple e-commerce website built using **HTML, CSS, and JavaScript**. It includes multiple pages for shopping, order tracking, and checkout.
@@ -23,9 +14,8 @@ This is a simple e-commerce website built using **HTML, CSS, and JavaScript**. I
 - 🚚 **Tracking Page** - Provides order tracking functionality.
 ![Homepage Screenshot](images/Readme/trackingPage.png)
 - 📄 **Product Data** - Fetched from a **GitHub Gist JSON file**.
-
-## 📂 Project Structure
-
+<!-- 
+## 📂 Project Structure -->
 
 ## ⚙️ Technologies Used
 
@@ -73,6 +63,11 @@ This is a simple e-commerce website built using **HTML, CSS, and JavaScript**. I
 
 🔹 Add authentication & user login
 
-🔹 Create my own Backend
+🔹 Create my own Backend:
+    1. Order.js
+    - need to create the backend for order.js
+    - which should be done in payment syummary
 
 🔹 Integrate payment gateway
+
+©2025 lakshay. All rights reserved.
