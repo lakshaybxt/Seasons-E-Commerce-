@@ -35,3 +35,14 @@ function fixPrice() {
     const total = (totalCost + Number(tax)).toFixed(2);
     return total;
 }
+
+export function getOrder(orderId) {
+    let matchingOrder;
+
+    orders.forEach((order) => {
+        if(order.id === orderId) {
+            matchingOrder = order;
+        }
+    });
+    return matchingOrder;
+}

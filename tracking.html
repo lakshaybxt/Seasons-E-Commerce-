@@ -83,39 +83,7 @@
 
 			</div>
 
-			<div class="orders-tracking">
-				
-				<div class="order-details">
-					<div class="order-status">
-						<div class="order">Order: <span>Preparing</span></div>
-						<div>Order arriving on 13 Mar 2025</div>
-					</div>
-					<div class="product-summary">
-						<div class="product-image">
-							<img src="images/product-images/Batman-tshirt.webp">
-						</div>
-						<div class="product-details">
-							<span class="season-logo">Seasons®</span>
-							<span>Men's Black Panther Mech Graphic Printed Oversized T-shirt</span>
-							<span>Quantity: 1</span>
-							<span>Price: ₹699</span>
-							<div class="progress-label-container">
-								<div class="progress-label">
-									<img src="images/tracking-utils/preparing.svg">
-								</div>
-								<div class="progress-label current-status">
-									<img src="images/tracking-utils/shipped.svg">
-								</div>
-								<div class="progress-label">
-									<img src="images/tracking-utils/preparing.svg">
-								</div>
-							</div>
-							<div class="progress-bar-container">
-								<div class="progress-bar"></div>
-							</div>
-						</div>
-					</div>
-				</div>
+			<div class="orders-tracking js-order-tracking">
 			</div>
 
 		</div>
@@ -176,11 +144,6 @@
 		</div>
 	</footer>
 	
-	<script src="scripts/tracking.js"></script>
-	<script>
-		const url = new URL(window.location.href);
-		console.log(url.searchParams.get('orderId'));
-		console.log(url.searchParams.get('productId'));
-	</script>
+	<script type="module" src="scripts/tracking.js"></script>
 </body>
 </html>
