@@ -23,7 +23,7 @@ class Product {
         this.rating= productDetails.rating;
         this.name = productDetails.name;
         this.price = productDetails.price;
-        this.keywords = productDetails.keywords
+        this.keywords = productDetails.keywords;
     }
 
     getStarsURL() {
