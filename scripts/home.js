@@ -120,4 +120,12 @@ function renderProductsGrid() {
             const search = document.querySelector('.js-search-input').value;
             window.location.href = `home.html?search=${search}`;
         });
+    
+    document.querySelector('.js-search-input')
+        .addEventListener('keydown', (event) => {
+            if(event.key === 'Enter') {
+                const search = document.querySelector('.js-search-input').value;
+                window.location.href = `home.html?search=${search}`;
+            }
+        });
 }

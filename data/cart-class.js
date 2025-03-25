@@ -95,6 +95,11 @@ class Cart {
         matchingItem.deliveryOptionId = deliveryOptionId;
         this.saveToStorage();
     }
+
+    resetCart() {
+        cart.cartItems = [];
+        this.saveToStorage();
+    }
 }
 //created an object of cart for our cart
 const cart = new Cart('cart-oop');
