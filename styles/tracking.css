@@ -202,6 +202,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    flex: 1;
 }
 .product-details span {
     color: #676767;
