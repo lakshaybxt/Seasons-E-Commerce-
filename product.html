@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="styles/product.css">
+</head>
+<body>
+    <main class="main">
+			<div class="container-grid">
+				<div class="product-image">
+					<div class="image-container">
+						<img class="image" src="images/product-images/men-s-black-the-panda-way-graphic-printed-oversized-t-shirt-580633-1738673393-1.webp" alt="Image">
+					</div>
+				</div>
+				<div class="product-details">
+					<div class="info">
+						<div class="details-info">
+							<div class="seasons-name">Seasons®</div>
+							<span>Men's Grey Eternity Graphic Printed Oversized T-shirt</span>
+						</div>
+
+						<div class="other-info">
+							<div class="product-price">
+								<span>₹699</span>
+								<span>Exclusive of all taxes</span>
+							</div>
+							<div class="product-rating">
+								<div class="rating">
+									<img src="images/ratings/rating-50.png">
+									<span>5.0</span>
+								</div>
+								<div class="reviews">
+									19 Reviews
+								</div>
+							</div>
+						</div>
+
+						<div class="size-mesaurments">
+							<div class="size">
+								<span>Select Size</span>
+								<span>SIZE GUIDE</span>
+							</div>
+							<div class="mesaurments">
+								<label>S</label>
+								<label>M</label>
+								<label>L</label>
+								<label>XL</label>
+								<label>2XL</label>
+							</div>
+						</div>
+
+						<div class="action-button">
+							<button class="add-button">
+								<img src="images/shop.svg">
+								ADD TO BAG
+							</button>
+							<button class="wishlisht-button">
+								<img src="images/hearts.svg">
+									WISHTLIST
+							</button>
+						</div>
+						
+						<div class="additional">
+							<div>
+								<img src="images/secure-payment.svg">
+								<span>100% SECURE PAYMENT</span>
+							</div>
+							<div>
+								<img src="images/easy-return.svg">
+								<span>EASY RETURNS & INSTANT REFUNDS</span>
+							</div>
+							<div>
+								<img src="images/genuine.svg">
+								<span>100% GENUINE PRODUCT</span>
+							</div>
+						</div>
+						
+						<div class="user-comment">
+							<div>
+									Hear what our customers say (19)
+							</div>
+							
+							<!-- Input box for new comments -->
+							<div class="comment-box">
+									<input type="text" id="user-comment" placeholder="Write a comment..." />
+									<button onclick="addComment()">Comment</button>
+							</div>
+					
+							<!-- New comments will be added here -->
+							<div id="new-comments"></div>
+					
+							<!-- Existing comment -->
+							<div class="comments-container">
+									<div class="user">
+											<span>Hardik Pandya</span>
+											<img src="images/ratings/rating-40.png">
+									</div>
+									<div class="comment">
+											<span>I love the design and fit is great</span>
+											<span>4 July 2025</span>
+									</div>
+							</div>
+					
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</main>
+		<script>
+			function addComment() {
+					let commentText = document.getElementById("user-comment").value;
+					if (commentText.trim() === "") return; // Prevent empty comments
+					
+					let commentSection = document.getElementById("new-comments");
+	
+					let newComment = document.createElement("div");
+					newComment.classList.add("comments-container");
+	
+					newComment.innerHTML = `
+							<div class="user">
+									<span>Anonymous</span>
+									<img src="images/ratings/rating-40.png">
+							</div>
+							<div class="comment">
+									<span>${commentText}</span>
+									<span>${new Date().toLocaleDateString()}</span>
+							</div>
+					`;
+	
+					commentSection.prepend(newComment); // Add new comments at the top
+					document.getElementById("user-comment").value = ""; // Clear input
+			}
+	</script>
+</body>
+</html>
