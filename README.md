@@ -23,6 +23,16 @@ Check out the live version of the project here:
 <!-- 
 ## 📂 Project Structure -->
 
+## Chatbot Assistant 🤖💬
+
+Our chatbot is designed to provide immediate assistance to customers and enhance their shopping experience. Here are some key details:
+
+- **Features**:
+  - Customer support through an interactive chatbot. 🛍️🤖
+  - Provides helpful information about products, order status, and website navigation. 📦
+  - Powered by AI for real-time assistance and intelligent responses. 🧠💡
+  ![AIBot Screenshot](images/Readme/ChatBot.png)
+
 ## ⚙️ Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript  
